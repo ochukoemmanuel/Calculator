@@ -59,7 +59,15 @@ public class MainActivity extends AppCompatActivity {
         resultTv.setText("");
     }
 
+    boolean leftBracket = true;
     public void bracket(View view) {
+        if (leftBracket){
+            setWorkingsTv("(");
+            leftBracket = false;
+        } else {
+            setWorkingsTv(")");
+            leftBracket = true;
+        }
     }
 
     public void power(View view) {
