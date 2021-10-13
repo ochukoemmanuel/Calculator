@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setWorkingsTv(String givenValue){
-        workings += givenValue;
+        workings = workings + givenValue;
         workingsTv.setText(workings);
     }
 

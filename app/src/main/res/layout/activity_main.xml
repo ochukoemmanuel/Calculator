@@ -12,13 +12,15 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingEnd="20dp"
+        android:paddingRight="20dp">
 
         <TextView
             android:id="@+id/workingsTextView"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
             android:textAlignment="textEnd"
             android:text="2 + 3"
             android:layout_weight="1"
@@ -26,7 +28,8 @@
             android:textColor="@color/white"
             android:layout_gravity="end"
             android:textSize="30sp"
-            tools:ignore="RtlCompat" />
+            tools:ignore="NestedWeights,RtlCompat"/>
+
         <TextView
             android:id="@+id/resultTextView"
             android:layout_width="wrap_content"
@@ -46,225 +49,231 @@
         android:layout_weight="7"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@null"
-                android:text="C"
-                android:onClick="clearOnClick"
-                android:textColor="@color/red"
-                android:textSize="@dimen/calcButtonTextSize" />
+                android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="DEL"
+                    android:onClick="clearOnClick"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/calcButtonTextSize" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="()"
+                    android:onClick="bracket"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calcButtonTextSize" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="^"
+                    android:onClick="power"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calcButtonTextSize" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="/"
+                    android:onClick="divide"
+                    android:textColor="@color/Orange"
+                    android:textSize="@dimen/calcButtonTextSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@color/material_on_surface_stroke"
-                android:text="()"
-                android:onClick="bracket"
-                android:textColor="@color/white"
-                android:textSize="@dimen/calcButtonTextSize" />
+                android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="7"
+                    android:onClick="seven"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calcButtonTextSize" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="8"
+                    android:onClick="eight"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calcButtonTextSize" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="9"
+                    android:onClick="nine"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calcButtonTextSize" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="X"
+                    android:onClick="multiply"
+                    android:textColor="@color/Orange"
+                    android:textSize="@dimen/calcButtonTextSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@color/material_on_surface_stroke"
-                android:text="^"
-                android:onClick="power"
-                android:textColor="@color/white"
-                android:textSize="@dimen/calcButtonTextSize" />
+                android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="4"
+                    android:onClick="four"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calcButtonTextSize" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="5"
+                    android:onClick="five"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calcButtonTextSize" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="6"
+                    android:onClick="six"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calcButtonTextSize" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="-"
+                    android:onClick="minus"
+                    android:textColor="@color/Orange"
+                    android:textSize="@dimen/calcButtonTextSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@color/material_on_surface_stroke"
-                android:text="/"
-                android:onClick="divide"
-                android:textColor="@color/Orange"
-                android:textSize="@dimen/calcButtonTextSize" />
-        </LinearLayout>
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="1"
+                    android:onClick="one"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calcButtonTextSize" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="2"
+                    android:onClick="two"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calcButtonTextSize" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="3"
+                    android:onClick="three"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calcButtonTextSize" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="+"
+                    android:onClick="plus"
+                    android:textColor="@color/Orange"
+                    android:textSize="@dimen/calcButtonTextSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@null"
-                android:text="7"
-                android:onClick="seven"
-                android:textColor="@color/white"
-                android:textSize="@dimen/calcButtonTextSize" />
+                android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/material_on_surface_stroke"
-                android:text="8"
-                android:onClick="eight"
-                android:textColor="@color/white"
-                android:textSize="@dimen/calcButtonTextSize" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="."
+                    android:onClick="dot"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calcButtonTextSize" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/material_on_surface_stroke"
-                android:text="9"
-                android:onClick="nine"
-                android:textColor="@color/white"
-                android:textSize="@dimen/calcButtonTextSize" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:text="0"
+                    android:onClick="zero"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calcButtonTextSize" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/material_on_surface_stroke"
-                android:text="X"
-                android:onClick="multiply"
-                android:textColor="@color/Orange"
-                android:textSize="@dimen/calcButtonTextSize" />
-        </LinearLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@color/Orange"
+                    android:text="="
+                    android:onClick="equals"
+                    android:textColor="@color/white"
+                    android:textSize="40sp" />
+            </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@null"
-                android:text="4"
-                android:onClick="four"
-                android:textColor="@color/white"
-                android:textSize="@dimen/calcButtonTextSize" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/material_on_surface_stroke"
-                android:text="5"
-                android:onClick="five"
-                android:textColor="@color/white"
-                android:textSize="@dimen/calcButtonTextSize" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/material_on_surface_stroke"
-                android:text="6"
-                android:onClick="six"
-                android:textColor="@color/white"
-                android:textSize="@dimen/calcButtonTextSize" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/material_on_surface_stroke"
-                android:text="-"
-                android:onClick="minus"
-                android:textColor="@color/Orange"
-                android:textSize="@dimen/calcButtonTextSize" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@null"
-                android:text="1"
-                android:onClick="one"
-                android:textColor="@color/white"
-                android:textSize="@dimen/calcButtonTextSize" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/material_on_surface_stroke"
-                android:text="2"
-                android:onClick="two"
-                android:textColor="@color/white"
-                android:textSize="@dimen/calcButtonTextSize" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/material_on_surface_stroke"
-                android:text="3"
-                android:onClick="three"
-                android:textColor="@color/white"
-                android:textSize="@dimen/calcButtonTextSize" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/material_on_surface_stroke"
-                android:text="+"
-                android:onClick="plus"
-                android:textColor="@color/Orange"
-                android:textSize="@dimen/calcButtonTextSize" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@null"
-                android:text="."
-                android:onClick="dot"
-                android:textColor="@color/white"
-                android:textSize="@dimen/calcButtonTextSize" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/material_on_surface_stroke"
-                android:text="0"
-                android:onClick="zero"
-                android:textColor="@color/white"
-                android:textSize="@dimen/calcButtonTextSize" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:background="@color/Orange"
-                android:text="="
-                android:onClick="equals"
-                android:textColor="@color/white"
-                android:textSize="40dp" />
-        </LinearLayout>
 
     </LinearLayout>
 
